@@ -8,7 +8,7 @@ The information is divided in three sections:
 
 * *Experimental study design*: information about the experimental study design used to obtain the raw data.
 * *Summary choices*: information about the choices made to clean and summarise the raw data. 
-* *Code book*: information about the variables in the mentioned data sets.
+* *Code book*: information about the variables in the *UCAHARData.txt* and *UCAHARAverage.txt* data sets.
 
 Experimental study design
 -------------------------
