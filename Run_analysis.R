@@ -1,6 +1,6 @@
 #--------------------------------------------------------------------------------
 # Name:     Run_analysis.R
-# Purpose:  Create a tidy dataset from the files contained in the UCI HAR Dataset
+# Purpose:  Create two tidy data sets from the files contained in the UCI HAR Dataset
 #           folder. Please read the README.md file for more information.
 # Author:   Jesus Santiago
 # Created:  20/07/2014
