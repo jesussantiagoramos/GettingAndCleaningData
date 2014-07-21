@@ -68,7 +68,7 @@ This data set is distributed AS-IS and no responsibility implied or explicit can
 
 Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
 
-R Scripts and Codebook author
+R scripts and Codebook author
 -----------------------------
 Jesús Santiago. July 2014.
 
