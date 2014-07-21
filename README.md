@@ -14,16 +14,16 @@ Downloading the data set with Download_and unzip.R
 --------------------------------------------------
 The script Download_and_unzip.R involves the following steps:
 
-1. The raw data set (Dataset.zip) is downloaded to the working directory. 
+1. The raw data set ("Dataset.zip") is downloaded to the working directory. 
 2. Dataset.zip is unzipped. A folder "UCI HAR Dataset" is created in the working directory, cotaining all the raw data files. **Please do not modify the files in this folder**. 
 
-Creating two tidy data sets with Run_analysis.R
+Obtaining two tidy data sets with Run_analysis.R
 ---------------------------------------------
 The script Run_analysis.R involves the following steps:
 
 1. Test and train raw data sets are merged in one single table. This initial data set has a dimension of 563 columns (subject identifier, activity class code and 561 variables) and 10299 rows (experimental records).
-2. From this data set, the measurements on the mean and standard deviation are selected. The variables selected are the ones that include "mean()" or "std()" in their names. Note that other features that may include "mean" (for example, "frequencyMean") are excluded, as they are not considered to be true mean measurements. A total of 66 variables are selected, the rest are removed from the data set (please read the Codebook.md file for a comprehensive list of the variables considered).
-3. Activity labels are assigned to the numerical activity class codes in the original data set. The labels have been modified (lowercase, underscores removed) for easier usage.
+2. From this data set, the measurements on the mean and standard deviation are selected. The variables selected are the ones that include "mean()" or "std()" in their names. Note that other features that may include "mean" in their names (for example, "meanFreq") are excluded, as they are not considered to be mean measurements in a strict sense. A total of 66 variables are selected, the rest are removed from the data set (please read the Codebook.md file for a comprehensive list of the variables finally considered).
+3. Activity labels are assigned to the numerical activity class codes in the original data set. The labels have been modified (lowercase, underscores removed) to facilitate their use:
 
 	| Original		| Final 		|
 	|:----------------------|:----------------------|
@@ -34,15 +34,15 @@ The script Run_analysis.R involves the following steps:
 	| "STANDING"		| "standing"		| 
 	| "LAYING"		| "laying" 		|
 
-4. In order to increase readability, original experimental feature names are also modified (no abbreviations; CamelCase; parenthesis and dashes removed). The resulting feature names are more descriptive, longer but easier to understand. The changes made are:
+4. In order to increase readability, original experimental variable names are also modified (no abbreviations; CamelCase; parenthesis and dashes removed). The resulting feature names are more descriptive, longer but easier to understand. This table summarises the chnges made:
 
 	| Original	| Final 	|
 	|:--------------|:--------------|
 	| initial "t" 	| "Time" 	|
 	| initial "f"	| "Frequency" 	|	
 	| "Acc"		| "Acceleration"| 
-	| "Gyro"	| "Gyroscope	| 
-	| "Mag"		| "Magnitude	| 
+	| "Gyro"	| "Gyroscope"	| 
+	| "Mag"		| "Magnitude"	| 
 	| "-mean()"	| "Mean" 	|
 	| "-std()"	| "StandardDev" |
 	| "-X"		| "Xaxis"	| 
@@ -50,8 +50,8 @@ The script Run_analysis.R involves the following steps:
 	| "-Z"		| "Zaxis"	| 
 	| "BodyBody"	| "Body"	| 
 
-5. The resulting data set has a dimension of 68 columns and 10299. The data set is saved to a text file ("UCIHARData.txt") in the working directory.
-6. A second, independent data set is created to summarize the first data set. The average value of each experimental variable are calculated for each activity and each subject. The resulting data set has 180 rows and 68 columns. The word "Average" is added to each feature name. The data set is saved to a text file ("UCIHARAverage.txt") in the working directory.
+5. The data set is saved to a text file ("UCIHARData.txt") in the working directory.
+6. A second, independent data set is created to summarize the first data set. The average value of each experimental variable is calculated for each activity and each subject. The resulting data set has 180 rows and 68 columns. The word "Average" is added to each feature name. The data set is saved to a text file ("UCIHARAverage.txt") in the working directory.
 
 How to read output text files
 -----------------------------
