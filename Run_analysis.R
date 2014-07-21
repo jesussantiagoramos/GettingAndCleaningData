@@ -1,9 +1,9 @@
 #--------------------------------------------------------------------------------
 # Name:     Run_analysis.R
-# Issue:    Create a tidy dataset from the files contained in the UCI HAR Dataset
+# Purpose:  Create a tidy dataset from the files contained in the UCI HAR Dataset
 #           folder. Please read the README.md file for more information.
 # Author:   Jesus Santiago
-# Date:     20/07/2014
+# Created:  20/07/2014
 #--------------------------------------------------------------------------------
 
 # PLEASE RUN THE CODE AS LONG AS THE UCI HAR DATASET FOLDER IS IN YOUR WORKING DIRECTORY
