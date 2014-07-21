@@ -1,7 +1,7 @@
 #--------------------------------------------------------------------------------
 # Name:     Download_and_unzip.R
 # Issue:    Download and unzip a dataset collected from the accelerometers from 
-#           the Samsung Galaxy S smartphone. Please read the README.txt file for 
+#           the Samsung Galaxy S smartphone. Please read the README.md file for 
 #           more information.
 # Author:   Jesus Santiago
 # Date:     20/07/2014
