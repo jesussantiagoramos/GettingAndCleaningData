@@ -2,7 +2,7 @@
 # Name:     Run_analysis.R
 # Issue:    Create a tidy dataset from the files contained in the UCI HAR Dataset
 #           folder Please read the README.txt file for more information.
-# Author:   Jesús Santiago
+# Author:   Jesï¿½s Santiago
 # Date:     20/07/2014
 #--------------------------------------------------------------------------------
 
@@ -45,14 +45,14 @@ names(testdata)[1:2] <- c("subject", "activity")
 # Bind traindata and testdata
 dataset <- rbind(traindata, testdata)
 
-# Assign feature names to the variable columns in the complete dataset
+# Assign feature names to the variable columns in the complete data set
 names(dataset)[3:ncol(dataset)] <- as.character(features$V2)
 
 # Select only the features that include "mean()" and "std()"
 selection <- grepl("(subject|activity|mean\\(\\)|std\\(\\))", names(dataset))
 dataset <- dataset[, selection]
 
-# Modify the name of the variables in the dataset
+# Modify the name of the variables in the data set
 varNames <- names(dataset)[3:ncol(dataset)]
 oldPatterns <- c("^t", "^f", "Acc", "Gyro", "Mag", 
                  "-mean\\(\\)", "-std\\(\\)", "-X", "-Y", "-Z", "BodyBody")
@@ -68,10 +68,10 @@ names(dataset)[3:ncol(dataset)] <- varNames
 library("plyr")
 dataset <- arrange(dataset, subject)
 
-# Save the dataset as a text file
+# Save the data set as a text file
 write.table(dataset, "UCIHARData.txt", row.names=FALSE)
 
-# Create a new dataset with the mean value of the variables for each activity and subject
+# Create a new data set with the mean value of the variables for each activity and subject
 dataset2 <- ddply(dataset, .(subject, activity), numcolwise(mean))
 
 # Add "Average" to variable names in dataset2
