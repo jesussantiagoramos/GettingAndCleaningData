@@ -1,21 +1,21 @@
-Readme
-======
+Readme.md
+=========
 Introduction
 ------------
-The purpose of the scripts included in this repo is to obtain a tidy data set from the Human Activity Recognition Using Smartphones Dataset (Version 1.0). The raw data set contains data collected from the accelerometers from the Samsung Galaxy S smartphone. More information about the data and the study design can be found in the README.txt file included with the data set. 
+The purpose of the scripts included in this repo is to obtain a tidy data set from the Human Activity Recognition Using Smartphones Dataset (Version 1.0). The raw data set contains data collected from the accelerometers from the Samsung Galaxy S smartphone. More information about the data and the experimental study design can be found in the Codebook.md file in this repo and in the README.txt file included with the original data set. A full description of the study is available at this [site] (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
 
-Files included in the repo
+Files included in this repo
 --------------------------
-1. Download and unzip.R: download the data set to the working directory and unzip the files.
-2. Run_analysis.R: process the data files and generate two text files containing the tidy data needed for analysis.
-3. Codebook.md: contains information about the variables included in the output files created with Run_analysis.R.
+1. *Download and unzip.R*: download the data set to the working directory and unzip the files.
+2. *Run_analysis.R*: process the data files and generate two text files containing the tidy data needed for analysis.
+3. *Codebook.md*: contains information about the variables included in the output files created with Run_analysis.R.
 
 Downloading the data set with Download_and unzip.R
 --------------------------------------------------
 The script Download_and_unzip.R involves the following steps:
 
 1. The raw data set (Dataset.zip) is downloaded to the working directory. 
-2. Dataset.zip is unzipped. A folder "UCI HAR Dataset" is created in the working directory, cotaining all the raw data files. Please do not modify the files in this folder. 
+2. Dataset.zip is unzipped. A folder "UCI HAR Dataset" is created in the working directory, cotaining all the raw data files. **Please do not modify the files in this folder**. 
 
 Creating a tidy data set with Run_analysis.R
 ---------------------------------------------
@@ -34,7 +34,7 @@ The script Run_analysis.R involves the following steps:
 	| "STANDING"		| "standing"		| 
 	| "LAYING"		| "laying" 		|
 
-4. In order to increase readability, original experimental feature names are modified (no abbreviations; CamelCase; parenthesis and dashes removed). The resulting feature names are more descriptive, longer but easier to understand. The changes made are:
+4. In order to increase readability, original experimental feature names are also modified (no abbreviations; CamelCase; parenthesis and dashes removed). The resulting feature names are more descriptive, longer but easier to understand. The changes made are:
 
 	| Original	| Final 	|
 	|:--------------|:--------------|
