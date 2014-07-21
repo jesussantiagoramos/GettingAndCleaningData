@@ -1,7 +1,7 @@
 #--------------------------------------------------------------------------------
 # Name:     Run_analysis.R
 # Issue:    Create a tidy dataset from the files contained in the UCI HAR Dataset
-#           folder Please read the README.txt file for more information.
+#           folder Please read the README.md file for more information.
 # Author:   Jesus Santiago
 # Date:     20/07/2014
 #--------------------------------------------------------------------------------
