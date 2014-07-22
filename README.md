@@ -2,7 +2,7 @@ Readme.md
 =========
 Introduction
 ------------
-The purpose of the scripts included in this repo is to obtain two indeendent tidy data sets from the Human Activity Recognition Using Smartphones Dataset (Version 1.0). The raw data set contains data collected from the accelerometers from the Samsung Galaxy S smartphone. More information about the data and the experimental study design can be found in the Codebook.md file in this repo and in the README.txt file included with the original data set. A full description of the study is available at this [site] (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
+The purpose of the scripts included in this repo is to obtain two independent tidy data sets from the Human Activity Recognition Using Smartphones Dataset (Version 1.0). The raw data set contains data collected from the accelerometers from the Samsung Galaxy S smartphone. More information about the data and the experimental study design can be found in the Codebook.md file in this repo and in the README.txt file included with the original data set. A full description of the study is available at this [site] (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
 
 Files included in this repo
 --------------------------
@@ -10,18 +10,18 @@ Files included in this repo
 2. *Run_analysis.R*: process the data files and generate two text files containing the tidy data needed for analysis.
 3. *Codebook.md*: contains information about the variables included in the output files created with Run_analysis.R.
 
-Downloading the data set with Download_and unzip.R
+Downloading the raw data set with Download_and unzip.R
 --------------------------------------------------
 The script Download_and_unzip.R involves the following steps:
 
 1. The raw data set ("Dataset.zip") is downloaded to the working directory. 
-2. Dataset.zip is unzipped. A folder "UCI HAR Dataset" is created in the working directory, cotaining all the raw data files. **Please do not modify the files in this folder**. 
+2. "Dataset.zip" is unzipped. A folder "UCI HAR Dataset" is created in the working directory, cotaining all the raw data files. **Please do not modify the files in this folder**. 
 
 Obtaining two tidy data sets with Run_analysis.R
 ---------------------------------------------
 The script Run_analysis.R involves the following steps:
 
-1. Test and train raw data sets are merged in one single table. This initial data set has a dimension of 563 columns (subject identifier, activity class code and 561 variables) and 10299 rows (experimental records).
+1. *Test* and *train* raw data tables are merged in one single table. The resulting data set has a dimension of 563 columns (subject identifier, activity class code and 561 variables) and 10299 rows (experimental records).
 2. From this data set, the measurements on the mean and standard deviation are selected. The variables selected are the ones that include "mean()" or "std()" in their names. Note that other features that may include "mean" in their names (for example, "meanFreq") are excluded, as they are not considered to be mean measurements in a strict sense. A total of 66 variables are selected, the rest are removed from the data set (please read the Codebook.md file for a comprehensive list of the variables finally considered).
 3. Activity labels are assigned to the numerical activity class codes in the original data set. The labels have been modified (lowercase, underscores removed) to facilitate their use:
 
@@ -50,8 +50,8 @@ The script Run_analysis.R involves the following steps:
 	| "-Z"		| "Zaxis"	| 
 	| "BodyBody"	| "Body"	| 
 
-5. The data set is saved to a text file ("UCIHARData.txt") in the working directory.
-6. A second, independent data set is created to summarize the first data set. The average value of each experimental variable is calculated for each activity and each subject. The resulting data set has 180 rows and 68 columns. The word "Average" is added to each feature name. The data set is saved to a text file ("UCIHARAverage.txt") in the working directory.
+5. The tidy data set is finally saved to a text file ("UCIHARData.txt") in the working directory.
+6. A second, independent data set is created to summarize the first tidy data set. The average value of each experimental variable is calculated for each activity and each subject. The resulting data set has 180 rows and 68 columns. The word "Average" is added to each feature name. The data set is saved to a text file ("UCIHARAverage.txt") in the working directory.
 
 How to read output text files
 -----------------------------
