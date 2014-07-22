@@ -20,6 +20,7 @@ activities <- read.table("UCI HAR Dataset/activity_labels.txt")
 
 # Modify activity labels (lowercase, no underscore)
 activityLabels <- tolower(gsub("_", "", activities$V2))
+
 # Add a column in ytrain and ytest with the corresponding activity labels
 for(i in 1:nrow(ytrain)) {
   x <- ytrain$V1[i]
