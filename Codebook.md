@@ -30,6 +30,8 @@ Only the measurements on the mean and standard deviation are selected from the o
 
 "UCIHARAverage.txt" data set provides the average value of each measurement for each activity and each subject.
 
+For a detailed explanation on the process of selecting and summarising data, please refer to the "README.md" file in this repo.
+
 Code book
 ---------
 **UCAHURData.txt**
