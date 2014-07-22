@@ -1,6 +1,6 @@
 #--------------------------------------------------------------------------------
 # Name:     Download_and_unzip.R
-# Purpose:  Download and unzip a dataset collected from the accelerometers from 
+# Purpose:  Download and unzip a data set collected from the accelerometers from 
 #           the Samsung Galaxy S smartphone. Please read the README.md file for 
 #           more information.
 # Author:   Jesus Santiago
