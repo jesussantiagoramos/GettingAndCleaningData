@@ -1,24 +1,24 @@
-Readme.md
+﻿Readme.md
 =========
 Introduction
 ------------
 The purpose of the scripts included in this repo is to obtain two independent tidy data sets from the Human Activity Recognition Using Smartphones Dataset (Version 1.0). The raw data set contains data collected from the accelerometers from the Samsung Galaxy S smartphone. More information about the data and the experimental study design can be found in the Codebook.md file in this repo and in the README.txt file included with the original data set. A full description of the study is available at this [site] (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
 
 Files included in this repo
---------------------------
+---------------------------
 1. *Download and unzip.R*: download the raw data set to the working directory and unzip the files.
 2. *Run_analysis.R*: process the data files and generate two text files containing the tidy data needed for analysis.
 3. *Codebook.md*: contains information about the variables included in the output files created with Run_analysis.R.
 
 Downloading the raw data set with Download_and unzip.R
---------------------------------------------------
+------------------------------------------------------
 The script Download_and_unzip.R involves the following steps:
 
 1. The raw data set ("Dataset.zip") is downloaded to the working directory. 
 2. "Dataset.zip" is unzipped. A folder "UCI HAR Dataset" is created in the working directory, cotaining all the raw data files. **Please do not modify the files in this folder**. 
 
 Obtaining two tidy data sets with Run_analysis.R
----------------------------------------------
+------------------------------------------------
 The script Run_analysis.R involves the following steps:
 
 1. *Test* and *train* raw data tables are merged in one single table. The resulting data set has a dimension of 563 columns (subject identifier, activity class code and 561 variables) and 10299 rows (experimental records).

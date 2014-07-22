@@ -1,5 +1,5 @@
 Codebook.md
-========================
+===========
 Introduction
 ------------
 This file contains information about the variables included in the "*UCAHARData.txt*" and "*UCAHARAverage.txt*" files. These files contain two independent tidy data sets that are the result of running the Run_analysis.R script. 
